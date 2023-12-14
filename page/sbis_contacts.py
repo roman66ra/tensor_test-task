@@ -28,13 +28,16 @@ class SbisContactsPage(BasePage):
 
         self.browser.find_element(By.CSS_SELECTOR,
                                   "#popup > div.controls-Popup.ws-float-area-show-complete.controls_themes__wrapper.controls-Scroll_webkitOverflowScrollingTouch.controls-Popup__lastItem.undefined.controls-Popup_shown > div > div > div > div > div.sbis_ru-Region-Panel > div > ul > li:nth-child(43) > span").click()
-        WebDriverWait(self.browser, 10).until(EC.title_contains("Камчатский край"))
+
+        WebDriverWait(self.browser, 50).until(EC.title_contains("Камчатский край"))
+        WebDriverWait(self.browser, 50).until(EC.url_changes("41-kamchatskij-kraj"))
 
         region = self.browser.find_element(By.CSS_SELECTOR,
                                            "#container > div.sbis_ru-content_wrapper.ws-flexbox.ws-flex-column > div > div.sbis_ru-container.sbisru-Contacts__relative > div.s-Grid-container.s-Grid-container--space.s-Grid-container--alignEnd.s-Grid-container--noGutter.sbisru-Contacts__underline > div:nth-child(1) > div > div:nth-child(2) > span > span")
 
         current_url = self.browser.current_url
-        WebDriverWait(self.browser, 10).until(EC.url_changes("https://sbis.ru/contacts/41-kamchatskij-kraj"))
+        print(current_url)
+        print(region.text)
 
         assert "https://sbis.ru/contacts/41-kamchatskij-kraj" in current_url
         assert region != first_region
