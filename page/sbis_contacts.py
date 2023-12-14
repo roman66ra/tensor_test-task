@@ -36,8 +36,6 @@ class SbisContactsPage(BasePage):
                                            "#container > div.sbis_ru-content_wrapper.ws-flexbox.ws-flex-column > div > div.sbis_ru-container.sbisru-Contacts__relative > div.s-Grid-container.s-Grid-container--space.s-Grid-container--alignEnd.s-Grid-container--noGutter.sbisru-Contacts__underline > div:nth-child(1) > div > div:nth-child(2) > span > span")
 
         current_url = self.browser.current_url
-        print(current_url)
-        print(region.text)
 
         assert "https://sbis.ru/contacts/41-kamchatskij-kraj" in current_url
         assert region != first_region
