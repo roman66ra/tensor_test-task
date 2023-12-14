@@ -1,9 +1,8 @@
 from page.sbis_contacts import SbisContactsPage
+from constants import url_sbis_contacts
 
 
 def test_second_case(browser):
-    url_sbis_contacts = "https://sbis.ru/contacts"
-
     page_sbis_contacts = SbisContactsPage(browser, url_sbis_contacts)
 
     page_sbis_contacts.open()

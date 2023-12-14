@@ -1,11 +1,9 @@
 from page.sbis_main import SbisMainPage
 from page.sbis_download import SbisDownload
+from constants import  url_sbis, url_sbis_download
 
 
 def test_third_case(browser):
-    url_sbis = "https://sbis.ru/"
-    url_sbis_download = "https://sbis.ru/download"
-
     page_sbis = SbisMainPage(browser, url_sbis)
     page_sbis_download = SbisDownload(browser, url_sbis_download)
 
