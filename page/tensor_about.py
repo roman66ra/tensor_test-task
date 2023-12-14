@@ -15,11 +15,6 @@ class TensorAboutPage(BasePage):
 
         for i in range(len_elements):
             if elements_size[i] == {'height': 309, 'width': 435}:
-                counter +=1
+                counter += 1
 
         assert counter == len(elements_size)
-
-
-
-
-
