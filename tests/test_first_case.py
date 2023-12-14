@@ -2,14 +2,14 @@ from page.sbis_main import SbisMainPage
 from page.sbis_contacts import SbisContactsPage
 from page.tensor_main import TensorMainPage
 from page.tensor_about import TensorAboutPage
-from constants import url_sbis, url_sbis_contacts, url_tensor, url_tensor_about
+from constants import URL_SBIS, URL_SBIS_CONTACTS, URL_TENSOR, URL_TENSOR_ABOUT
 
 
 def test_first_case(browser):
-    page_sbis = SbisMainPage(browser, url_sbis)
-    page_sbis_contacts = SbisContactsPage(browser, url_sbis_contacts)
-    page_tensor = TensorMainPage(browser, url_tensor)
-    page_tensor_about = TensorAboutPage(browser, url_tensor_about)
+    page_sbis = SbisMainPage(browser, URL_SBIS)
+    page_sbis_contacts = SbisContactsPage(browser, URL_SBIS_CONTACTS)
+    page_tensor = TensorMainPage(browser, URL_TENSOR)
+    page_tensor_about = TensorAboutPage(browser, URL_TENSOR_ABOUT)
 
     page_sbis.open()
     page_sbis.go_to_contacts_page()
